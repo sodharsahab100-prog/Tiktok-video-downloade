@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Video Downloader</title>
+  <style>
+    body {
+      text-align: center;
+      font-family: Arial;
+      background: #111;
+      color: white;
+      padding: 20px;
+    }
+
+    input {
+      width: 90%;
+      padding: 10px;
+      margin: 10px;
+      border-radius: 10px;
+    }
+
+    button {
+      padding: 10px 20px;
+      border-radius: 10px;
+      background: red;
+      color: white;
+      border: none;
+    }
+  </style>
+</head>
+
+<body>
+
+  <h2>🎬 Video Downloader</h2>
+
+  <input type="text" id="url" placeholder="TikTok link paste karo">
+
+  <br>
+
+  <button onclick="downloadVideo()">Download</button>
+
+  <p id="msg"></p>
+
+  <script>
+    function downloadVideo() {
+      let url = document.getElementById("url").value;
+
+      if(url == "") {
+        document.getElementById("msg").innerText = "Link paste karo!";
+        return;
+      }
+
+      // Demo message (real downloader nahi hai)
+      document.getElementById("msg").innerText =
+        "Processing link... (real app ke liye backend chahiye)";
+    }
+  </script>
+
+</body>
+</html>
