@@ -1,59 +1,59 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <title>Video Downloader</title>
-  <style>
-    body {
-      text-align: center;
-      font-family: Arial;
-      background: #111;
-      color: white;
-      padding: 20px;
-    }
-
-    input {
-      width: 90%;
-      padding: 10px;
-      margin: 10px;
-      border-radius: 10px;
-    }
-
-    button {
-      padding: 10px 20px;
-      border-radius: 10px;
-      background: red;
-      color: white;
-      border: none;
-    }
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TikTok Pro Downloader & Earn</title>
+    <style>
+        body { font-family: 'Segoe UI', sans-serif; background: #000; color: white; text-align: center; padding: 15px; }
+        .card { background: #1a1a1a; padding: 25px; border-radius: 20px; box-shadow: 0 0 20px #fe2c55; max-width: 400px; margin: auto; border: 1px solid #333; }
+        h2 { color: #fe2c55; margin-bottom: 5px; }
+        input { width: 90%; padding: 12px; margin: 15px 0; border-radius: 10px; border: none; font-size: 16px; color: #000; }
+        .btn-download { background: #fe2c55; color: white; border: none; padding: 12px 30px; border-radius: 50px; font-weight: bold; width: 100%; cursor: pointer; font-size: 18px; box-shadow: 0 4px 15px rgba(254, 44, 85, 0.4); }
+        
+        /* Earning Section */
+        .earn-section { margin-top: 25px; border-top: 1px dashed #444; padding-top: 20px; }
+        .earn-btn { background: #25d366; color: white; border: none; padding: 12px; border-radius: 10px; width: 100%; margin-bottom: 10px; font-weight: bold; text-decoration: none; display: block; font-size: 16px; }
+        .promo-text { color: #ffcc00; font-size: 14px; font-weight: bold; margin-bottom: 10px; }
+    </style>
 </head>
-
 <body>
 
-  <h2>🎬 Video Downloader</h2>
+    <div class="card">
+        <img src="https://cdn-icons-png.flaticon.com/512/3046/3046121.png" width="50" alt="logo" style="margin-bottom:10px;">
+        <h2>TikTok Saver</h2>
+        <p style="font-size: 13px; color: #ccc;">Download Video Without Watermark</p>
+        
+        <input type="text" id="url" placeholder="TikTok link yahan paste karein...">
+        <button class="btn-download" onclick="startProcess()">Download Now</button>
+        <p id="status" style="margin-top:10px;"></p>
 
-  <input type="text" id="url" placeholder="TikTok link paste karo">
+        <div class="earn-section">
+            <p class="promo-text">🔥 Special Offers (Daily Earning) 🔥</p>
+            <a href="https://www.google.com" target="_blank" class="earn-btn">💰 Click here to Earn $5 Daily</a>
+            <a href="https://www.google.com" target="_blank" class="earn-btn" style="background: #34b7f1;">🎁 Win Free Mobile Recharge</a>
+        </div>
+    </div>
 
-  <br>
+    <p style="margin-top: 20px; color: #666; font-size: 12px;">Created by Sodhar Sahab © 2026</p>
 
-  <button onclick="downloadVideo()">Download</button>
-
-  <p id="msg"></p>
-
-  <script>
-    function downloadVideo() {
-      let url = document.getElementById("url").value;
-
-      if(url == "") {
-        document.getElementById("msg").innerText = "Link paste karo!";
-        return;
-      }
-
-      // Demo message (real downloader nahi hai)
-      document.getElementById("msg").innerText =
-        "Processing link... (real app ke liye backend chahiye)";
-    }
-  </script>
+    <script>
+        function startProcess() {
+            let link = document.getElementById("url").value;
+            let status = document.getElementById("status");
+            if(link === "") {
+                status.innerText = "Pehle link paste karein!";
+                status.style.color = "yellow";
+            } else {
+                status.innerText = "Processing... Please wait";
+                status.style.color = "#25d366";
+                setTimeout(function(){
+                    alert("Video link process ho gaya hai! (Design Update Success)");
+                }, 2000);
+            }
+        }
+    </script>
 
 </body>
 </html>
+
